@@ -1,0 +1,38 @@
+[
+  {
+    "name": "Basic Cotton T-Shirt",
+    "description": "Soft 100% cotton t-shirt suitable for everyday wear.",
+    "price": 299,
+    "image": "https://images.unsplash.com/photo-1523381210434-271e8be1f52b"
+  },
+  {
+    "name": "Running Shoes",
+    "description": "Lightweight breathable running shoes for daily training.",
+    "price": 1599,
+    "image": "https://images.unsplash.com/photo-1600181952037-7b1d6aa5e3b2"
+  },
+  {
+    "name": "Waterproof Backpack",
+    "description": "Durable backpack with multiple compartments and waterproof coating.",
+    "price": 999,
+    "image": "https://images.unsplash.com/photo-1542291026-7eec264c27ff"
+  },
+  {
+    "name": "Wireless Headphones",
+    "description": "Noise-isolating wireless headphones with 20-hour battery.",
+    "price": 1999,
+    "image": "https://images.unsplash.com/photo-1518442072965-6d1b81b72e2f"
+  },
+  {
+    "name": "Analog Wrist Watch",
+    "description": "Classic analog wristwatch with leather strap.",
+    "price": 799,
+    "image": "https://images.unsplash.com/photo-1523275335684-37898b6baf30"
+  },
+  {
+    "name": "Sports Water Bottle",
+    "description": "BPA-free water bottle suitable for gym and outdoor travel.",
+    "price": 249,
+    "image": "https://images.unsplash.com/photo-1599058917212-d750089bc07e"
+  }
+]
