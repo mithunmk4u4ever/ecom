@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import API from '../../api/api';
+import { Link } from 'react-router-dom';
 
 const AdminOrders = () => {
   const [orders, setOrders] = useState([]);
@@ -24,6 +25,9 @@ const AdminOrders = () => {
 
   return (
     <div className="container mt-4">
+         <Link className="btn btn-outline-dark btn-sm px-3 ms-auto" to="/addproduct">
+          Add Product
+        </Link>
       <h2 className="mb-4">All Orders</h2>
       <div className="row">
         {orders.map(order => (

@@ -1,4 +1,5 @@
 const User=require("../models/User")
+const Product=require("../models/Product")
 const Order=require("../models/Order")
 const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
@@ -40,6 +41,30 @@ console.log(user);
   }
 }
 
+const adminAddProduct= async (req, res) => {
+  try {
+    const { name, description, price, image } = req.body;
+
+    if (!name || !price) {
+      return res.status(400).json({ message: "Name and price are required" });
+    }
+
+    const newProduct = new Product({
+      name,
+      description,
+      price,
+      image
+    });
+
+    await newProduct.save();
+    res.status(201).json({ message: "Product added successfully", product: newProduct });
+
+  } catch (error) {
+    // res.status(500).json({ message: "Error adding product", error });
+    console.log(error)
+  }
+};
+
 const adminViewOrders=async (req, res) => {
   try {
     const orders = await Order.find()
@@ -67,4 +92,4 @@ const updateOrderStatus=async (req, res) => {
   }
 }
 
-module.exports={adminRegistration,adminLogin,adminViewOrders,updateOrderStatus};
+module.exports={adminRegistration,adminLogin,adminViewOrders,updateOrderStatus,adminAddProduct};

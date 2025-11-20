@@ -7,5 +7,7 @@ router.post("/register", adminController.adminRegistration);
 router.post("/login", adminController.adminLogin);
 router.get('/orders', protect, adminOnly, adminController.adminViewOrders);
 router.patch('/orders/:id', protect, adminOnly, adminController.updateOrderStatus);
+router.post('/addproduct', protect, adminOnly, adminController.adminAddProduct);
+
 
 module.exports = router;

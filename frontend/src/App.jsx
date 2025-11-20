@@ -22,6 +22,7 @@ import AdminRoute from "./components/AdminRoute";
 import Navbar from "./components/Navbar";
 import AdminLogin from "./pages/Admin/AdminLogin";
 import AdminRegister from "./pages/Admin/AdminRegister";
+import AddProduct from "./pages/Admin/AddProduct";
 
 // localStorage.clear()
 
@@ -60,6 +61,9 @@ function App() {
         <Route path="/adminlogin" element={<AdminLogin />} />
 
         <Route path="/admin/orders" element={<AdminRoute><AdminOrders /></AdminRoute>} />
+        <Route path="/addproduct" element={<AdminRoute><AddProduct /></AdminRoute>} />
+
+
 
 
       </Routes>
