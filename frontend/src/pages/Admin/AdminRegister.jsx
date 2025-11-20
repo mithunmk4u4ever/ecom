@@ -45,7 +45,7 @@ const AdminRegister = () => {
       localStorage.setItem("token", res.data.token);
       localStorage.setItem("user", JSON.stringify(res.data.user));
 
-      navigate("/");
+      navigate("/admin/login");
     } catch (err) {
       setError(err.response?.data?.msg || "Something went wrong");
     }
