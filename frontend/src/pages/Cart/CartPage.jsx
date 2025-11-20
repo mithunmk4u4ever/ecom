@@ -60,6 +60,26 @@ const Cart = () => {
     }
   };
 
+
+  useEffect(() => {
+  const fetchOrders = async () => {
+    try {
+      const res = await API.get("/orders", {
+        headers: { Authorization: `Bearer ${token}` },
+      });
+
+     
+      const lastOrder = res.data.find(order => order.deliveryAddress);
+      if (lastOrder) {
+        setAddress(lastOrder.deliveryAddress);
+      }
+
+    } catch (err) {
+      console.error("Fetch Orders Error:", err);
+    }
+  };
+  fetchOrders();
+}, [token]);
   if (loading) return <h4 className="text-center mt-4">Loading Cart...</h4>;
   if (!cart || cart.length === 0)
     return <h3 className="text-center mt-5">Your Cart is Empty 🛒</h3>;
@@ -68,6 +88,8 @@ const Cart = () => {
     (sum, item) => sum + item.productId.price * item.quantity,
     0
   );
+
+  
 
   return (
     <div className="container mt-4">

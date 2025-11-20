@@ -18,7 +18,7 @@ const handleAddToCart = async (id) => {
     if (result.success) {
       alert("Product added to cart!");
     } else {
-      alert(result.message);
+      alert("Please login to make purchases.");
     }
   };
   return (

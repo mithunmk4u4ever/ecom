@@ -18,12 +18,12 @@ const Login = () => {
 
     try {
       const res = await API.post("/login", { email, password });
-  login(res.data.token, res.data.user);
+      login(res.data.token, res.data.user);
 
       localStorage.setItem("token", res.data.token);
       localStorage.setItem("user", JSON.stringify(res.data.user));
 
-      navigate("/products"); 
+      navigate("/products");
     } catch (err) {
       setError(err.response?.data?.msg || "Invalid credentials");
     }
